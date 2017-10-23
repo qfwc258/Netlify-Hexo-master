@@ -600,14 +600,14 @@ vendors:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
-  canvas_nest: 
+  canvas_nest: true
 
   # three
   three:
 
   # three_waves
   # https://github.com/jjandxa/three_waves
-  three_waves: true
+  three_waves: false
 
   # three_waves
   # https://github.com/jjandxa/canvas_lines
