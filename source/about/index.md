@@ -1,13 +1,6 @@
 <div id="posts" class="posts-expand">
-  <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline"></h2>
-
-
-
-</header>
-
-    
+    
     
       <blockquote class="blockquote-center"><br><br>You got a dream, you gotta protect it. People can’t do something themselves,they wanna tell you you can’t do it.If you want something, go get it. Period.<br><br></blockquote>
 
