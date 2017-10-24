@@ -1,7 +1,7 @@
 comments: false
 
 --------------
-<div id="posts" class="posts-expand">
+<div id="posts" class="posts-expand" style="margin-top:0px;">
 
 
       <h2 id="Name">Name</h2><p>EN: Jey Zhang  |  CN: 张 捷</p>
