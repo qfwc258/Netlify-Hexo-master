@@ -45,6 +45,10 @@ page:
   tags: 标签
 
 
+footer:
+  powered: ""
+  theme: 主题
+
 counter:
   tag_cloud:
     zero: 暂无标签
