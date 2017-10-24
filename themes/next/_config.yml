@@ -147,7 +147,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/lyusantu
-
+  E-mail: mailto:geekrainy@gmail.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -161,6 +161,8 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  E-mail: email
+
 
 
 # Sidebar Avatar
@@ -218,8 +220,7 @@ links_title: 友情链接
 #links_layout: block
 #links_layout: inline
 links:
-  qq: http://wpa.qq.com/msgrd?v=3&uin=352050321&site=qq&menu=yes
-  github: https://github.com/lyusantu
+  QQ: http://wpa.qq.com/msgrd?v=3&uin=352050321&site=qq&menu=yes
 
 # ---------------------------------------------------------------
 # Post Settings
