@@ -1,9 +1,6 @@
 comments: false
 
 --------------
-
-<div class="main-inner">
-        
 <div id="posts" class="posts-expand">
 
 
