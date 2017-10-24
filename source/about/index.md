@@ -2,13 +2,9 @@ comments: false
 
 --------------
 
-
-
 <div class="main-inner">
-        <div id="content" class="content">
-
-
-  <div id="posts" class="posts-expand">
+        
+<div id="posts" class="posts-expand">
 
 
       <h2 id="Name">Name</h2><p>EN: Jey Zhang  |  CN: 张 捷</p>
@@ -24,7 +20,6 @@ comments: false
 <p><a href="https://i.imgur.com/IIkBQBj.jpg" class="fancybox" rel="group"><img src="https://i.imgur.com/IIkBQBj.jpg" alt=""></a></p>
 <p><strong>加好友请备注：”博客”，近期博主准备筹建NLP方面的技术群，欢迎感兴趣的小伙伴加我入群交流:)</strong></p>
 <h2 id="Donate">Donate</h2><p>Any supports would be appreciated and motivated.<br>请赐予我 「 钱进 」 的动力吧~~</p>
-<p><a href="http://i.imgur.com/tTBAnzw.png" class="fancybox" rel="group"><img src="http://i.imgur.com/tTBAnzw.png" alt=""></a></p>
-
+<p><a href="http://i.imgur.com/tTBAnzw.png" class="fancybox" rel="group"><img src="http://i.imgur.com/tTBAnzw.png" alt=""></a></p
 
   </div>
