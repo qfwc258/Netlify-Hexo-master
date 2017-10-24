@@ -1,3 +1,9 @@
+comments: false
+
+--------------
+
+
+
 <div class="main-inner">
         <div id="content" class="content">
 
@@ -21,7 +27,4 @@
 <p><a href="http://i.imgur.com/tTBAnzw.png" class="fancybox" rel="group"><img src="http://i.imgur.com/tTBAnzw.png" alt=""></a></p>
 
 
-  </div>
-
-
-        </div>
+  </div>
