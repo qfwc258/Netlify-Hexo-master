@@ -13,6 +13,8 @@
   本站访客数:<span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
+
+<!--
 {% if theme.copyright %}
 <div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
@@ -25,3 +27,5 @@
   </a>
 </div>
 {% endif %}
+
+-->
