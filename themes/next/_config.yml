@@ -315,9 +315,9 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
-  shortname: lyusantu
-  count: true
+  enable: false
+  shortname:
+  count:
 
 # Hypercomments
 #hypercomments_id:
