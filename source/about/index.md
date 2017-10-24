@@ -34,9 +34,4 @@
 
       <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the &lt;a href="//disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
-      </div>
-
-  </div>
-
-
-      </div>
+      </div>
