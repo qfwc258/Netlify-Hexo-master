@@ -1,5 +1,4 @@
-<div id="content" class="content">
-            
+
 
   <div id="posts" class="posts-expand">
   <header class="post-header">
@@ -22,5 +21,3 @@
     
   </div>
 
-
-          </div>
