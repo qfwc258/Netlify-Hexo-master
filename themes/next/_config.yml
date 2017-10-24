@@ -6,7 +6,7 @@
 favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "lyusantu,吕三土,吕垚"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -49,11 +49,11 @@ index_with_subtitle: false
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
-  home: /
+  #home: /
   #categories: /categories/
-  about: /about/
   archives: /archives/
-  tags: /tags/
+  about: /about/
+  #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
