@@ -13,7 +13,7 @@
 <span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
-<i class="fa fa-eye"></i><span id="busuanzi_container_site_uv">
+<i class="fa fa-eye">
 <span id="busuanzi_container_site_pv">
    <span id="busuanzi_value_site_pv"></span>
 </span>
