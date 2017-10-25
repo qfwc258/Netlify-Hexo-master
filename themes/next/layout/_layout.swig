@@ -67,6 +67,10 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
+  {% if theme.leancloud_visitors.enable %}
+  {% include '_scripts/lean-analytics.swig' %}
+  {% endif %}
+
   {% block script_extra %}
     {% include '_scripts/pages/post-details.swig' %}
   {% endblock %}
