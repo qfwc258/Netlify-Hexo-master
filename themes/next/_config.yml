@@ -11,7 +11,7 @@ keywords: "lyusantu,吕三土,吕垚"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss: false
+rss:
 
 # Specify the date when the site was setup
 since: 2017
@@ -50,10 +50,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   #home: /
-  categories: /categories/
+  #categories: /categories/
   archives: /archives/
-  tags: /tags/
   about: /about/
+  #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -162,7 +162,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-  E-mail: envelope
+  E-mail:
   QQ : qq
 
 
