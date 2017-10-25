@@ -1,4 +1,4 @@
-title: 关于
+title: 
 date: 2017-10-25 13:53:44
 type: "about"
 comments: false
