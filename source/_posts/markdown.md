@@ -1,6 +1,6 @@
 title: Markdown语法手册
-date: 2016-11-11
-comments: false
+date: 2016/11/11
+comments: true
 tags:
  - Markdown
  - 语法
