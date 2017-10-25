@@ -20,11 +20,6 @@ reward_comment: 您的支持将鼓励我继续创作！
 wechatpay: /images/wechatpay.jpg
 alipay: /images/alipay.jpg
 
-# add post views
-leancloud_visitors:
-  enable: true
-  app_id: Ed6Vp4gOoP2nWJ3vXBYc0cGX-9Nh9j0Va
-  app_key: QlgwB8OwBSbbroMkf78GYqNY
 
 # icon between year and author @Footer
 authoricon: heart
@@ -55,7 +50,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   #home: /
-  categories: /categories/
+  #categories: /categories/
   archives: /archives/
   tags: /tags/
   about: /about/
