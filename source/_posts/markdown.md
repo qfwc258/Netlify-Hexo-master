@@ -4,7 +4,9 @@ comments: false
 tags:
  - Markdown
  - 语法
-categories: 记录
+categories: 
+ - 记录
+ 
 ------------------
 
 Markdown语法记录{#index} (纯文本标记语言)
