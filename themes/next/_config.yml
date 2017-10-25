@@ -528,7 +528,7 @@ pace: true
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+pace_theme: pace-theme-mac-osx
 
 # Canvas-nest
 canvas_nest: true
