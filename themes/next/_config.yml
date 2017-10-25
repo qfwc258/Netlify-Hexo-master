@@ -16,7 +16,7 @@ rss: false
 # Specify the date when the site was setup
 since: 2017
 
-reward_comment: 您的支持将鼓励我继续创作！ 
+reward_comment: 您的支持将鼓励我继续创作！
 wechatpay: /images/wechatpay.jpg
 alipay: /images/alipay.jpg
 
@@ -162,7 +162,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-  E-mail: mail
+  E-mail: envelope-open
   QQ : qq
 
 
