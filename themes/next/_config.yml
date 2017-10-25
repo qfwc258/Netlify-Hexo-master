@@ -148,6 +148,7 @@ font:
 social:
   GitHub: https://github.com/lyusantu
   E-mail: mailto:lyusantu@gmail.com
+  QQ : http://wpa.qq.com/msgrd?v=3&uin=352050321&site=qq&menu=yes
 
 # Social Links Icons
 # Icon Mapping:
@@ -162,6 +163,7 @@ social_icons:
   Twitter: twitter
   Weibo: weibo
   E-mail: mail
+  QQ : qq
 
 
 
@@ -602,7 +604,7 @@ vendors:
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
-  
+
   # three
   three:
 
