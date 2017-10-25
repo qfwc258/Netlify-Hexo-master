@@ -75,3 +75,8 @@ theme: next
 deploy:
   type:
 
+# add post views
+leancloud_visitors:
+  enable: true
+  app_id: Ed6Vp4gOoP2nWJ3vXBYc0cGX-9Nh9j0Va
+  app_key: QlgwB8OwBSbbroMkf78GYqNY
