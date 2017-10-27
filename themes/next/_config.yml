@@ -54,7 +54,7 @@ menu:
   archives: /archives/
   about: /about/
   tags: /tags/
-  message: /message/
+  guestbook: /guestbook/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -75,7 +75,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
-  message: comment
+  guestbook:
 
 
 

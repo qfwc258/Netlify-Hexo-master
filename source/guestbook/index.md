@@ -1,6 +1,4 @@
 title: 留言
-date: 2017-10-27 10:40:57
-type: "message"
 comments: true
 ---
 <blockquote class="blockquote-center"><br><br>
