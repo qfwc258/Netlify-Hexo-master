@@ -52,7 +52,7 @@ menu:
   #home: /
   categories: /categories/
   archives: /archives/
-  about: /about/
+  #about: /about/
   tags: /tags/
   guestbook: /guestbook/
   #sitemap: /sitemap.xml
@@ -74,7 +74,8 @@ menu_icons:
   tags: tags
   archives: archive
   sitemap: sitemap
-  commonweal: wpforms
+  commonweal: heartbeat
+  guestbook: wpforms
 
 
 
