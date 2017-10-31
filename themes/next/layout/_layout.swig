@@ -81,5 +81,8 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
+
+  {% include '_scripts/third-party/lean-analytics.swig' %}
+
 </body>
 </html>
