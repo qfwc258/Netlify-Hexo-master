@@ -52,7 +52,7 @@ menu:
   #home: /
   categories: /categories/
   archives: /archives/
-  about: /about/
+  about: http://lyusantu.github.io/
   tags: /tags/
   guestbook: /guestbook/
   #sitemap: /sitemap.xml
