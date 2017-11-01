@@ -53,7 +53,7 @@ menu:
   archives: /archives/
   categories: /categories/
   tags: /tags/
-  about:
+  #about: lyusantu.github.io
   guestbook: /guestbook/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
