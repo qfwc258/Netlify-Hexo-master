@@ -349,7 +349,7 @@ livere_uid: MTAyMC8zMTQ4OC84MDUy
 #    button | slide
 # Warning: Baidu Share does not support https.
 baidushare: true
-##  type: button
+type: button
 
 # Share
 #jiathis:
