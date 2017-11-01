@@ -14,7 +14,7 @@ keywords: "lyusantu,吕三土,吕垚"
 rss:
 
 # Specify the date when the site was setup
-since: 2017
+since: 2015 - 2017
 
 reward_comment: 看看就好了，扫码就不必了 :)
 wechatpay: /images/wechatpay.jpg
@@ -53,7 +53,7 @@ menu:
   archives: /archives/
   categories: /categories/
   tags: /tags/
-  about: http://lyusantu.github.io/
+  about:
   guestbook: /guestbook/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
