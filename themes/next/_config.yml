@@ -55,7 +55,7 @@ menu:
   tags: /tags/
   about: http://lyusantu.github.io/
   guestbook: /guestbook/
-  sitemap: /sitemap.xml
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
