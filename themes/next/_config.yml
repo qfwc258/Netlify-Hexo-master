@@ -310,7 +310,7 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-swiftype_key: ZfY9NozKs6TTxZZzdoAb
+swiftype_key: dcW2ohvFxMA2s6mobFPZ
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -348,8 +348,8 @@ livere_uid: MTAyMC8zMTQ4OC84MDUy
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-baidushare: true
-type: button
+# baidushare: false
+##  type: button
 
 # Share
 #jiathis:
