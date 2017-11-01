@@ -352,7 +352,7 @@ livere_uid: MTAyMC8zMTQ4OC84MDUy
 ##  type: button
 
 # Share
-#jiathis:
+jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
