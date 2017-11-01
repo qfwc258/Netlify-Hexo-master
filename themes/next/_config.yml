@@ -348,11 +348,11 @@ livere_uid: MTAyMC8zMTQ4OC84MDUy
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
+baidushare: true
 ##  type: button
 
 # Share
-jiathis: true
+#jiathis:
 # Warning: JiaThis does not support https.
 #add_this_id:
 
