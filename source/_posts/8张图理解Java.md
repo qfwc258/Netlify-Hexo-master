@@ -7,7 +7,7 @@ categories:
  - 后端技术
 ----------
 
-一图胜千言，图片均来源于Program Creek ![](https://www.programcreek.com/)
+一图胜千言，图片均来源于Program Creek [](https://www.programcreek.com/)
 <!-- more -->
 
 ## 1、字符串不变性
