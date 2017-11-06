@@ -263,10 +263,10 @@ post_wordcount:
   separated_meta: true
 
 # Wechat Subscriber
-wechat_subscriber:
-  enabled: true
-  qcode: /images/wechat.jpg
-  description: wechat
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /images/wechat.jpg
+  #description: wechat
 
 # Declare license on posts
 post_copyright:
