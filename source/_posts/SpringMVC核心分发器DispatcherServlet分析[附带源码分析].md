@@ -84,7 +84,7 @@ DispatcherServlet覆写了FrameworkServlet中的onRefresh方法：
 
 视图处理初始化initViewResolvers方法：[SpringMVC视图机制详解]()
 
-请求映射处理初始化initHandlerMappings方法：[]详解SpringMVC请求的时候是如何找到正确的Controller]()
+请求映射处理初始化initHandlerMappings方法：[详解SpringMVC请求的时候是如何找到正确的Controller]()
 
 总结一下各个Servlet的作用：
 
