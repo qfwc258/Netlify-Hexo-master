@@ -12,6 +12,7 @@ categories: MySQL
 
 比如我们有一个表t_users，有4个字段：
 
+<!-- more -->
 ```sql
 create table t_users (
 	id bigint(20) not null auto_increment,
