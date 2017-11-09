@@ -14,6 +14,8 @@ categories:
 **消息盒子的提醒(带条数)、好友消息的底部通知**
 ![](http://oih7sazbd.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171103173314.jpg)
 
+<!-- more -->
+
 **消息盒子打开后的详情、统一添加好友后的分组选择及拒绝添加好友的理由**
 ![](http://oih7sazbd.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171103173547.jpg)
 
