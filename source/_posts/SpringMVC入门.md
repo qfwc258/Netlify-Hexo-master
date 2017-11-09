@@ -42,7 +42,7 @@ SpringMVC是一款Web MVC框架。 它跟Struts框架类似，是目前主流的
 还有另外一个注意点，这个servlet对应的url-pattern最好写成 "/"， 不要写成 "/*"。  
 
 至于为什么需要写成 "/" ， 具体请参考
-[Servlet容器Tomcat中web.xml中url-pattern的配置详解[附带源码分析]](https://blog.lyu3.com/Servlet%E5%AE%B9%E5%99%A8Tomcat%E4%B8%ADweb.xml%E4%B8%ADurl-pattern%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3[%E9%99%84%E5%B8%A6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90]/)
+[Servlet容器Tomcat中web.xml中url-pattern的配置详解[附带源码分析]](https://blog.lyu3.com/servlet%E5%AE%B9%E5%99%A8tomcat%E4%B8%ADweb.xml%E4%B8%ADurl-pattern%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/)
 
 在dispatcher-servlet.xml中主要是配置springmvc的一些Controller的初始化，静态文件的映射策略，视图的配置等。
 
