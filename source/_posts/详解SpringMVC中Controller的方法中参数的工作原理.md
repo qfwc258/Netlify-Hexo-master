@@ -105,11 +105,11 @@ HandlerAdapter在内部对于每个请求，都会实例化一个ServletInvocabl
 
 ![](http://images.cnitblog.com/i/411512/201405/161001448906593.jpg)
 
-1. 处理请求的时候，会根据ServletInvocableHandlerMethod的属性argumentResolvers（这个属性是它的父类InvocableHandlerMethod中定义的）进行处理，其中argumentResolvers属性是一个HandlerMethodArgumentResolverComposite类(这里使用了组合模式的一种变形)，这个类是实现了HandlerMethodArgumentResolver接口的类，里面有各种实现了HandlerMethodArgumentResolver的List集合。
+1 处理请求的时候，会根据ServletInvocableHandlerMethod的属性argumentResolvers（这个属性是它的父类InvocableHandlerMethod中定义的）进行处理，其中argumentResolvers属性是一个HandlerMethodArgumentResolverComposite类(这里使用了组合模式的一种变形)，这个类是实现了HandlerMethodArgumentResolver接口的类，里面有各种实现了HandlerMethodArgumentResolver的List集合。
 
 ![](http://images.cnitblog.com/i/411512/201405/152047402658258.jpg)
 
-2. 处理响应的时候，会根据ServletInvocableHandlerMethod的属性returnValueHandlers(自身属性)进行处理，returnValueHandlers属性是一个HandlerMethodReturnValueHandlerComposite类(这里使用了组合模式的一种变形)，这个类是实现了HandlerMethodReturnValueHandler接口的类，里面有各种实现了HandlerMethodReturnValueHandler的List集合。
+2 处理响应的时候，会根据ServletInvocableHandlerMethod的属性returnValueHandlers(自身属性)进行处理，returnValueHandlers属性是一个HandlerMethodReturnValueHandlerComposite类(这里使用了组合模式的一种变形)，这个类是实现了HandlerMethodReturnValueHandler接口的类，里面有各种实现了HandlerMethodReturnValueHandler的List集合。
 
 ![](http://images.cnitblog.com/i/411512/201405/152047089217350.jpg)
 
@@ -151,41 +151,41 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 
 下面来我们来看看常用的HandlerMethodArgumentResolver实现类(本文粗略讲下，有兴趣的读者可自行研究)。
 
-1. RequestParamMethodArgumentResolver
+1 RequestParamMethodArgumentResolver
 
  支持带有@RequestParam注解的参数或带有MultipartFile类型的参数
 
-2. RequestParamMapMethodArgumentResolver
+2 RequestParamMapMethodArgumentResolver
 
   支持带有@RequestParam注解的参数 && @RequestParam注解的属性value存在 && 参数类型是实现Map接口的属性
 
-3. PathVariableMethodArgumentResolver
+3 PathVariableMethodArgumentResolver
 
 支持带有@PathVariable注解的参数 且如果参数实现了Map接口，@PathVariable注解需带有value属性
 
-4. MatrixVariableMethodArgumentResolver
+4 MatrixVariableMethodArgumentResolver
 
 支持带有@MatrixVariable注解的参数 且如果参数实现了Map接口，@MatrixVariable注解需带有value属性 
 
-5. RequestResponseBodyMethodProcessor
+5 RequestResponseBodyMethodProcessor
 
  本文已分析过
 
-6. ServletRequestMethodArgumentResolver
+6 ServletRequestMethodArgumentResolver
 
  参数类型是实现或继承或是WebRequest、ServletRequest、MultipartRequest、HttpSession、Principal、Locale、TimeZone、InputStream、Reader、HttpMethod这些类。
 
 （这就是为何我们在Controller中的方法里添加一个HttpServletRequest参数，Spring会为我们自动获得HttpServletRequest对象的原因）
 
-7. ServletResponseMethodArgumentResolver
+7 ServletResponseMethodArgumentResolver
 
  参数类型是实现或继承或是ServletResponse、OutputStream、Writer这些类
 
-8. RedirectAttributesMethodArgumentResolver
+8 RedirectAttributesMethodArgumentResolver
 
  参数是实现了RedirectAttributes接口的类
 
-9. HttpEntityMethodProcessor
+9 HttpEntityMethodProcessor
 
  参数类型是HttpEntity
 
@@ -225,7 +225,7 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 
 下面开始解释为何本文开头出现那些现象的原因：
 
-1. 第一个方法testRb以及地址 http://localhost:8888/SpringMVCDemo/test/testRb?name=1&age=3
+  1 第一个方法testRb以及地址 http://localhost:8888/SpringMVCDemo/test/testRb?name=1&age=3
 
 　　这个方法的参数使用了@RequestBody，之前已经分析过，被RequestResponseBodyMethodProcessor进行处理。之后根据http请求头部的contentType然后选择合适的消息转换器进行读取。
 
@@ -239,18 +239,18 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 ![](http://images.cnitblog.com/i/411512/201405/171148581408407.png)
 
 完美解决。
-
-2. testCustomObj方法以及地址 http://localhost:8888/SpringMVCDemo/test/testCustomObj?name=1&age=3
+  
+  2 testCustomObj方法以及地址 http://localhost:8888/SpringMVCDemo/test/testCustomObj?name=1&age=3
 
 这个请求会找到ServletModelAttributeMethodProcessor这个resolver。默认的resolver中有两个ServletModelAttributeMethodProcessor，只不过实例化的时候属性annotationNotRequired一个为true，1个为false。这个ServletModelAttributeMethodProcessor处理参数支持@ModelAttribute注解，annotationNotRequired属性为true的话，参数不是简单类型就通过，因此选择了ServletModelAttributeMethodProcessor，最终通过DataBinder实例化Employee对象，并写入对应的属性。
 
-3. testCustomObjWithRp方法以及地址 http://localhost:8888/SpringMVCDemo/test/testCustomObjWithRp?name=1&age=3
+ 3 testCustomObjWithRp方法以及地址 http://localhost:8888/SpringMVCDemo/test/testCustomObjWithRp?name=1&age=3
 
 这个请求会找到RequestParamMethodArgumentResolver(使用了@RequestParam注解)。RequestParamMethodArgumentResolver在处理参数的时候使用request.getParameter(参数名)即request.getParameter("e")得到，很明显我们的参数传的是name=1&age=3。因此得到null，RequestParamMethodArgumentResolver处理missing value会触发MissingServletRequestParameterException异常。 ［粗略讲下，有兴趣的读者请自行查看源码］
 
   解决方案：去掉@RequestParam注解，让ServletModelAttributeMethodProcessor来处理。
 
-4. testDate方法以及地址 http://localhost:8888/SpringMVCDemo/test/testDate?date=2014-05-15
+ 4 testDate方法以及地址 http://localhost:8888/SpringMVCDemo/test/testDate?date=2014-05-15
 
 这个请求会找到RequestParamMethodArgumentResolver。因为这个方法与第二个方法一样，有两个RequestParamMethodArgumentResolver，属性useDefaultResolution不同。RequestParamMethodArgumentResolver支持简单类型，ServletModelAttributeMethodProcessor是支持非简单类型。最终步骤跟第三个方法一样，我们的参数名是date，于是通过request.getParameter("date")找到date字符串(这里参数名如果不是date，那么最终页面是空白的，因为没有@RequestParam注解，参数不是必须的，RequestParamMethodArgumentResolver处理null值返回null)。最后通过DataBinder找到合适的属性编辑器进行类型转换。最终找到java.util.Date对象的构造函数 public Date(String s)，由于我们传递的格式不是标准的UTC时间格式，因此最终触发了IllegalArgumentException异常。
 
