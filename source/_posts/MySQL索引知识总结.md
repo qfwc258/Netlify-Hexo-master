@@ -11,7 +11,6 @@ categories: MySQL
 对MySQL索引知识的总结笔记。
 
 ---
-<!-- more -->
 
 ## 普通索引
 
