@@ -13,6 +13,7 @@ categories:
 
 下面这张图展示了这段代码做了什么
 
+<!-- more -->
 ```java
 String s = "abcd";
 s = s.concat("ef");
