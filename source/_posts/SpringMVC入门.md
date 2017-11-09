@@ -2,7 +2,7 @@ title: SpringMVC入门
 date: 2017-08-02
 comments: true
 tag:
- - Servlet
+ - SpringMVC
 categories: 后端技术
 
 ----------
