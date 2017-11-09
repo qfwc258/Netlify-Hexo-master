@@ -18,6 +18,7 @@ WebSocket 是发送和接收消息的底层API，WebSocket 协议提供了通过
 
 ![](http://oih7sazbd.bkt.clouddn.com/1.png)
 
+<!-- more -->
 #### 1.1 写Handler处理类
 
 **方法1：实现 WebSocketHandler 接口，WebSocketHandler 接口如下**
