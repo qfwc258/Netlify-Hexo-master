@@ -81,11 +81,11 @@ DispatcherServlet覆写了FrameworkServlet中的onRefresh方法：
 
 很明显，initStrategies方法内部会初始化各个策略接口的实现类。
 
-比如异常处理初始化initHandlerExceptionResolvers方法：[SpringMVC异常处理机制详解]()
+比如异常处理初始化initHandlerExceptionResolvers方法：[SpringMVC异常处理机制详解](https://blog.lyu3.com/SpringMVC%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6%E8%AF%A6%E8%A7%A3/)
 
-视图处理初始化initViewResolvers方法：[SpringMVC视图机制详解]()
+视图处理初始化initViewResolvers方法：[SpringMVC视图机制详解](https://blog.lyu3.com/SpringMVC%E8%A7%86%E5%9B%BE%E6%9C%BA%E5%88%B6%E8%AF%A6%E8%A7%A3/)
 
-请求映射处理初始化initHandlerMappings方法：[详解SpringMVC请求的时候是如何找到正确的Controller]()
+请求映射处理初始化initHandlerMappings方法：[详解SpringMVC请求的时候是如何找到正确的Controller](https://blog.lyu3.com/%E8%AF%A6%E8%A7%A3SpringMVC%E8%AF%B7%E6%B1%82%E7%9A%84%E6%97%B6%E5%80%99%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%BE%E5%88%B0%E6%AD%A3%E7%A1%AE%E7%9A%84Controller/)
 
 总结一下各个Servlet的作用：
 
