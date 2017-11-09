@@ -96,7 +96,7 @@ RequestMappingHandlerAdapter是请求处理的适配器，也就是请求之后�
 
 私有方法:getMessageConverters
 
-!{](http://images.cnitblog.com/i/411512/201405/101630232136603.png)
+![](http://images.cnitblog.com/i/411512/201405/101630232136603.png)
 
 从代码中我们可以，RequestMappingHandlerAdapter设置messageConverters的逻辑：
 
@@ -273,7 +273,7 @@ $.ajax({
 
 如果不想使用<mvc:annotation-driven/>中默认的RequestMappingHandlerAdapter的话，我们可以在重新定义这个bean，spring会覆盖掉默认的RequestMappingHandlerAdapter。
 
-为何会覆盖，请参考楼主的另外一篇博客：[Spring中Ordered接口简介]()
+为何会覆盖，请参考楼主的另外一篇博客：[Spring中Ordered接口简介](https://blog.lyu3.com/Spring中Ordered接口简介/)
 
 ```xml
 bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
