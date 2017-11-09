@@ -8,7 +8,6 @@ categories:
 ----------
 
 一图胜千言，图片均来源于Program Creek [](https://www.programcreek.com/)
-<!-- more -->
 
 ## 1、字符串不变性
 
