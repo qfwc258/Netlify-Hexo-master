@@ -71,7 +71,7 @@ public class TestController {
 
 ![](http://images.cnitblog.com/i/411512/201405/151550068591409.jpg)
 
-为何返回的Employee对象会被自动解析为xml，请看楼主的另一篇博客：[SpringMVC关于json、xml自动转换的原理研究[附带源码分析]]()
+为何返回的Employee对象会被自动解析为xml，请看楼主的另一篇博客：[SpringMVC关于json、xml自动转换的原理研究[附带源码分析]](https://blog.lyu3.com/springmvc%E5%85%B3%E4%BA%8Ejson%E3%80%81xml%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%8E%9F%E7%90%86%E7%A0%94%E7%A9%B6/)
 
 为何Employee参数会被解析，带有@RequestParam的Employee参数不会被解析，甚至报错？
 
@@ -195,11 +195,11 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 
 下面来我们来看看常用的HandlerMethodReturnValueHandler实现类。
 
-1. ModelAndViewMethodReturnValueHandler
+1 ModelAndViewMethodReturnValueHandler
 
 返回值类型是ModelAndView或其子类
 
-2. ModelMethodProcessor
+2 ModelMethodProcessor
 
 返回值类型是Model或其子类
 
@@ -207,15 +207,15 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 
 返回值类型是View或其子类 
 
-4. HttpHeadersReturnValueHandler
+4 HttpHeadersReturnValueHandler
 
 返回值类型是HttpHeaders或其子类  
 
-5. ModelAttributeMethodProcessor
+5 ModelAttributeMethodProcessor
 
 返回值有@ModelAttribute注解
 
-6. ViewNameMethodReturnValueHandler
+6 ViewNameMethodReturnValueHandler
 
 返回值是void或String
 
@@ -256,11 +256,11 @@ RequestResponseBodyMethodProcessor响应的具体处理是使用消息转换器�
 
 解决方案：
 
-1. 传递参数的格式修改成标准的UTC时间格式：http://localhost:8888/SpringMVCDemo/test/testDate?date=Sat, 17 May 2014 16:30:00 GMT
+1 传递参数的格式修改成标准的UTC时间格式：http://localhost:8888/SpringMVCDemo/test/testDate?date=Sat, 17 May 2014 16:30:00 GMT
 
 ![](http://images.cnitblog.com/i/411512/201405/171551382342264.png)
 
-2.在Controller中加入自定义属性编辑器。
+2 在Controller中加入自定义属性编辑器。
 
  ```java
 @InitBinder
