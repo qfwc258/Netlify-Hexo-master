@@ -4,8 +4,7 @@ comments: true
 tags: 
  - Java
  - 优化
-categories: 
- - 后端技术
+categories: Java
 ----------
 
 ## 1. Visual VM

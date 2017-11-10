@@ -4,7 +4,7 @@ comments: true
 tag:
  - SpringMVC
  - Java
-categories: 后端技术
+categories: SpringMVC
 
 ----
 ## 前言

@@ -5,7 +5,7 @@ tags:
  - Java
  - WebSocket
  - 即时通讯
-categories: 
+categories: WebSocket
 ----------
  
 **好友的分组展示、好友在线/离线状态(头像置灰)、个性签名修改的监听、窗口皮肤的更换**

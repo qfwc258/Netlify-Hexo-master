@@ -4,7 +4,7 @@ comments: true
 tag:
  - SpringMVC
  - Java
-categories: 后端技术
+categories: SpringMVC
 
 ----------
 SpringMVC是一款Web MVC框架。 它跟Struts框架类似，是目前主流的Web MVC框架之一。

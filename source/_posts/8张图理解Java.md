@@ -3,8 +3,7 @@ date: 2017/10/15
 comments: true
 tags: 
  - Java
-categories: 
- - 后端技术
+categories: Java
 ----------
 
 一图胜千言，图片均来源于Program Creek [](https://www.programcreek.com/)

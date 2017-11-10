@@ -5,7 +5,7 @@ tag:
  - SpringMVC
  - 拦截器
  - Java
-categories: 后端技术
+categories: SpringMVC
 
 ----
 ## 前言

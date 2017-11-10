@@ -5,7 +5,7 @@ tags:
  - SpringMVC
  - Controller
  - Java
-categories: 后端技术
+categories: SpringMVC
 
 ----------
 SpringMVC是目前主流的Web MVC框架之一。 

@@ -5,7 +5,7 @@ tag:
  - SpringMVC
  - Java
  - Exception
-categories: 后端技术
+categories: SpringMVC
 
 ----
 ## 前言
