@@ -14,6 +14,8 @@ categories: Python
 
 ![](http://oih7sazbd.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171128171606.jpg)
 
+<!-- more -->
+
 ## Python交互模式
 
 在命令行模式下输入命令 `python`，会输出一堆文本，此时就进入到了Python交互模式。它的提示符是`>>>`
