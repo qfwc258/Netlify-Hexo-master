@@ -486,9 +486,272 @@ def add_end(L=None):
 
 
 
+### 可变参数
 
+在Python函数中，还可以定义可变参数。顾名思义，可变参数就是传入的这个参数是可变的，可以是1个、2个到任意个，也可以是0个。
 
+以数学题为例，给定一组数字`a`，`b`，`c`...，计算`a² + b² + c² + ...`
 
+要定义出这个函数，必须确定输入的参数。由于参数个数不确定，可以考虑把`a`，`b`，`c`... 作为一个`list`或`tuple`，如下定义：
 
+```python
+def calc(numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+```
+
+但是在调用的时候，必须先组装成一个`list`或`tuple`：
+
+```python
+>>> calc([1, 2, 3])
+14
+>>> calc((1, 3, 5, 7))
+84
+```
+
+如果利用可变参数，调用函数的方式可以简化：
+
+```python
+>>> calc(1, 2, 3)
+14
+>>> calc(1, 3, 5, 7)
+84
+```
+
+所以，把函数的参数改为可变参数：
+
+```python
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+```
+
+定义可变参数和定义一个`list`或者`tuple`参数相比，仅仅在参数前面加上了一个`*`号。
+
+在函数内部，参数`numbers`接收到的是一个`tuple`，因此，函数代码完全不变。但是调用函数时，可以传入任意个参数，包括0个参数：
+
+```python
+>>> calc(1, 2)
+5
+>>> calc()
+0
+```
+
+如果已经有一个`list`或者`tuple`，要调用一个可变参数的话：
+
+```python
+>>> nums = [1, 2, 3]
+>>> calc(nums[0], nums[1], nums[2])
+14
+```
+
+这样的写法是可行的，但是太繁琐，所以Python允许在`list`和`tuple`前加上一个`*`号，把`list`和`tuple`的元素变成可变元素传进去：
+
+```python
+>>> nums = [1, 2, 3]
+>>> calc(*nums)
+14
+```
+
+`*nums`表示把`nums`这个`list`的所有元素作为可变参数传进去，这种写法相当有用，而且很常见。
+
+### 关键字参数
+
+可变参数允许传入`0`个或任意个参数，这些可变参数在函数调用时自动组装成一个`tuple`。而关键字参数允许传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个`dist`：
+
+```python
+def person(name, age, **kw):
+  print('name:', name, 'age:', age, 'other:', kw)
+```
+
+函数`person`除了必须参数`name`和`age`外，还接受关键字参数`kw`。在调用该函数时，可以只传入必选参数：
+
+```python
+>>> person('Michael', 30)
+name: Michael age: 30 other: {}
+```
+
+也可以传入任意个数的关键字参数：
+
+```python
+>>> person('Bob', 25, city = 'BEIJING')
+name: Bob age: 25 other: {'city': 'BEIJING'}
+>>> person('Adam', 45, gender='M', job='Engineer')
+name: Adam age: 45 other: {'gender': 'M', 'job': 'Engineer'}
+```
+
+关键字参数有什么用？
+
+关键字参数可以扩展函数的功能。比如，在`person`函数里，我们可以保证能接受到`name`和`age`这两个参数，但是，如果调用者愿意提供更多的参数，我们也可以收到。 假想在做一个用户注册的功能，除了用户名和年龄是必填项外，其它都可以是可选项，利用关键字参数来定义这个函数就能满足注册的需求。
+
+与可变参数类似，也可以先组装成一个`dist`，然后，把这个`dist`转换为关键字参数传进去：
+
+```python
+>>> extra = {'city': 'BEIJING', 'job': 'Engineer'}
+>>> person('Jack', 24, city = extra['city'], job = extra['job'])
+name: Jack age: 24 other: {'city': 'BEIJING', 'job': 'Engineer'}
+```
+
+上面复杂的调用可以用简化的写法：
+
+```python
+>>> extra = {'city': 'BEIJING', 'job': 'Engineer'}
+>>> person('Jack', 24, **extra)
+name: Jack age: 24 other: {'city': 'BEIJING', 'job': 'Engineer'}
+```
+
+`**extra`表示把`extra`这个`dict`的所有`key-value`用关键字参数传入到函数的`**kw`中，`kw`将获得一个`dict`，注意`kw`获得的`dict`是`extra`的一份拷贝，对`kw`的改动不会影响到函数外的`extra`。
+
+### 命名关键字参数
+
+对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。至于到底传了那些，就需要在函数内部通过`kw`检查。
+
+以`person()`为例，此处检查是否有`city`和`job`参数：
+
+```python
+def person(name, age ,**kw):
+  if 'city' in kw:
+    # 有city参数
+    pass
+  if 'job' in kw:
+    # 有job参数
+    pass
+  print('name:', name, 'age:', age, 'other:', kw)
+```
+
+但是调用者仍可以传入不受限制的关键字参数：
+
+```python
+>>> person('Jack', 24, city = 'BEIJING', add = 'CHAOYANG', zipcode = 123456)
+name: Jack age: 24 other: {'city': 'BEIJING', 'add': 'CHAOYANG', 'zipcode': 123456}
+```
+
+如果要限制关键字参数的名字，就可以用命名关键字参数，例如：只接收`city`和`job`作为关键字参数：
+
+```python
+def person(name, age, *, city, job):
+  print(name, age, city, job)
+```
+
+和关键字参数`**kw`不同，命名关键字参数需要一个特殊分隔符`*`，`*`后面的参数被视为命名关键字参数：
+
+```python
+>>> person('Jack', 24, city='Beijing', job='Engineer')
+Jack 24 Beijing Engineer
+```
+
+如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符`*`了：
+
+```python
+def person(name, age, *args, city, job):
+  print(name, age, args, city, job)
+```
+
+命名关键字参数必须传入参数名，这和位置参数不同。如果没有传入参数名，调用就会出错：
+
+```python
+>>> person('Jack', 24, 'Beijing', 'Engineer')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: person() takes 2 positional arguments but 4 were given
+```
+
+由于调用时缺少参数名`city`和`job`，Python解释器把这4个参数均视为位置参数，但`person()`函数仅接受2个位置参数。
+
+命名关键字参数可以有缺省值，从而简化调用：
+
+```python
+def person(name, age, *, city = 'BEIJING', job):
+  print(name, age, city, job)
+```
+
+由于命名关键字参数`city`具有默认值，所以，调用时，可以不传入`city`参数：
+
+```python
+>>> person('Jack', 24, job = 'Engineer')
+Jack 24 BEIJING Engineer
+```
+
+使用命名关键字参数时，要特别注意的地方是，如果没有可变参数，就必须加一个`*`作为特殊分隔符。如果缺少`*`，Python解释器将无法识别位置参数和命名关键字参数：
+
+```python
+def person(name, age, city, job):
+  # 缺少 *, city 和 job 被视为位置参数
+  pass
+```
+
+### 参数组合
+
+在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是值得注意的地方是，参数定义的顺序必须必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
+
+定义一个函数，包含上述若干种参数：
+
+```python
+def f1(a, b, c = 0, *args, **kw):
+    print('a =',a, 'b =',b, 'c =',c, 'args =',args, 'kw = ', kw)
+
+def f2(a, b, c = 0, *, d, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
+```
+
+在函数调用的时候，Python解释器自动按照参数位置和参数名把对应的参数传进去：
+
+```python
+>>> f1(1, 2)
+a = 1 b = 2 c = 0 args = () kw =  {}
+>>> f1(1, 2, c = 3)
+a = 1 b = 2 c = 3 args = () kw =  {}
+>>> f1(1, 2, 3, 'a', 'b')
+a = 1 b = 2 c = 3 args = ('a', 'b') kw =  {}
+>>> f1(1, 2, 3, 'a', 'b', x = 99)
+a = 1 b = 2 c = 3 args = ('a', 'b') kw =  {'x': 99}
+>>> f2(1, 2, d = 99, ext = None)
+a = 1 b = 2 c = 0 d = 99 kw = {'ext': None}
+```
+
+最神奇的是通过一个`tuple`和`dict`，也可以调用上述函数：
+
+```python
+>>> args = (1, 2, 3, 4)
+>>> kw = {'d': 99, 'x': '#'}
+>>> f1(*args, **kw)
+a = 1 b = 2 c = 3 args = (4,) kw =  {'d': 99, 'x': '#'}
+>>> args = (1, 2, 3)
+>>> kw = {'d': 88, 'x': '#'}
+>>> f2(*args, **kw)
+a = 1 b = 2 c = 3 d = 88 kw = {'x': '#'}
+```
+
+所以，对于任意函数，都可以通过类似`func(*args, **kw)`的形式调用它，无论它的参数是如何定义的。
+
+> **虽然可以组合多达5种参数，但是不要同时使用太多的组合，否则函数接口的可理解性很差**
+
+### 小结
+
+Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。
+
+默认参数一定要用不可变对象，如果是可变对象，程序运行时会有逻辑错误！
+
+要注意定义的可变参数和关键字参数的语法：
+
+- `*args`是可变参数，`args`接收的是一个`tuple`
+- `**kw`是关键字参数，，`kw`接收的是一个`dict`
+
+以及调用函数时如何传入可变参数和关键字参数的语法：
+
+- 可变参数既可以直接传入：`fun(1, 2, 3)`，又可以先组装成`list`或`tuple`，再通过`args`传入：`fun(*(1, 2, 3))`
+- 关键字参数即可以直接传入`fun(a = 1, b = 2)`，又可以先组装成`dict`，再通过`**kw`传入：`fun(**{'a': 1, 'b': 2})`
+
+使用`*args`和`**kw`是Python的习惯用法，当然也可以用其它的参数名，但最好使用习惯用法。
+
+命名的关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。
+
+定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。
+
+---
 
 
