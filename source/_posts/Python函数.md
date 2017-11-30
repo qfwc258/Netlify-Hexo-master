@@ -27,6 +27,8 @@ Python内置了很多有用的函数，可供我们直接调用。
 
 调用函数的时候，如果传入的参数数量不对，会报错`TypeError`，并且Python会明确的告诉你：`abs()`有且仅有`1`个参数，但你给出了`n`个：
 
+<!-- more -->
+
 ```python
 >>> abs(1,2)
 Traceback (most recent call last):
