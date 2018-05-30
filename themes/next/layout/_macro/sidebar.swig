@@ -100,7 +100,7 @@
            <!-- <a href="https://creativecommons.org/{% if theme.creative_commons === 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ theme.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">
               <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
             </a-->
-			<a href="www.xlking.com" class="cc-opacity" target="_blank">
+			<a href="http://www.xlking.com" class="cc-opacity" target="_blank">
 			湘灵科技
 			</a>			
           </div>
