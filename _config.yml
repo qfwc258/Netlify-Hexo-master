@@ -2,14 +2,14 @@
 # 需要修改的内容已经用中文标注出来了
 
 # Site
-title: 
-subtitle: 无趣
-description:
-author: lyusantu
+title: 生命的轨迹
+subtitle: 心有猛虎 细嗅蔷薇
+description:思想 散记 随笔 代码 法律 武术 中医
+author: 尘苇
 language: zh-Hans
 timezone:
 
-url: https://blog.lyu3.com/
+url: https://blog.xlking.com/
 permalink: :title/
 permalink_defaults:
 
